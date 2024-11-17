@@ -342,6 +342,7 @@ TOKENIZER_MAPPING_NAMES = OrderedDict[str, Optional[str]](
         ("xlnet", "XLNetTokenizer" if is_tokenizers_available() else None),
         ("xlstm", "GPTNeoXTokenizerFast" if is_tokenizers_available() else None),
         ("xmod", "XLMRobertaTokenizerFast" if is_tokenizers_available() else None),
+        ("xalma", "LlamaTokenizerFast" if is_tokenizers_available() else ("LlamaTokenizer" if is_sentencepiece_available() else None)),
         ("yoso", "AlbertTokenizer" if is_tokenizers_available() else None),
         ("zamba", "LlamaTokenizerFast" if is_tokenizers_available() else None),
         ("zamba2", "LlamaTokenizerFast" if is_tokenizers_available() else None),
