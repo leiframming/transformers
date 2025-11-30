@@ -386,6 +386,7 @@ if TYPE_CHECKING:
     from .wavlm import *
     from .whisper import *
     from .x_clip import *
+    from .xalma import *
     from .xcodec import *
     from .xglm import *
     from .xlm import *
@@ -399,7 +400,6 @@ if TYPE_CHECKING:
     from .zamba import *
     from .zamba2 import *
     from .zoedepth import *
-    from .xalma import *
 else:
     import sys
 

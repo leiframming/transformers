@@ -22,6 +22,9 @@
 from transformers.models.llama.configuration_llama import LlamaConfig
 
 
+__all__ = ["XALMAConfig"]
+
+
 class XALMAConfig(LlamaConfig):
     r"""
     This is the configuration class to store the configuration of a [`XALMAModel`]. It is used to instantiate an X-ALMA

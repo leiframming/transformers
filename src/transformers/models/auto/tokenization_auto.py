@@ -334,6 +334,12 @@ TOKENIZER_MAPPING_NAMES = OrderedDict[str, Optional[str]](
         ("wav2vec2-conformer", "Wav2Vec2CTCTokenizer"),
         ("wav2vec2_phoneme", "Wav2Vec2PhonemeCTCTokenizer"),
         ("whisper", "WhisperTokenizer" if is_tokenizers_available() else None),
+        (
+            "xalma",
+            "LlamaTokenizerFast"
+            if is_tokenizers_available()
+            else ("LlamaTokenizer" if is_sentencepiece_available() else None),
+        ),
         ("xclip", "CLIPTokenizerFast" if is_tokenizers_available() else None),
         ("xglm", "XGLMTokenizer" if is_tokenizers_available() else None),
         ("xlm", "XLMTokenizer"),
@@ -342,7 +348,6 @@ TOKENIZER_MAPPING_NAMES = OrderedDict[str, Optional[str]](
         ("xlnet", "XLNetTokenizer" if is_tokenizers_available() else None),
         ("xlstm", "GPTNeoXTokenizerFast" if is_tokenizers_available() else None),
         ("xmod", "XLMRobertaTokenizerFast" if is_tokenizers_available() else None),
-        ("xalma", "LlamaTokenizerFast" if is_tokenizers_available() else ("LlamaTokenizer" if is_sentencepiece_available() else None)),
         ("yoso", "AlbertTokenizer" if is_tokenizers_available() else None),
         ("zamba", "LlamaTokenizerFast" if is_tokenizers_available() else None),
         ("zamba2", "LlamaTokenizerFast" if is_tokenizers_available() else None),
